@@ -1,0 +1,71 @@
+:root{
+    --color1: #4A4448;
+    --color2: #756C71;
+    --bg-page: #e9e7e9;
+    --bg-input: #dfdcdf;
+    --text-heading-sm: 12px;
+    --text-heading-md: 16px;
+    --text-body-sm: 18px;
+    --bg-userbox: #f4f1f2;
+    --borders-default: #dfdcdf;
+}
+
+body{
+    background-color: var(--bg-page);
+}
+
+.container-large{
+    max-width: 1140px;
+    display: block;
+    margin: auto;
+}
+.container-large .subscribe .image{
+    text-align: center;
+    padding: 60px 0 30px 0;
+}
+.container-large .subscribe .image img{
+    width: 150px;
+}
+.container-large .subscribe .insert-fidelity-card input{
+    background-color: var(--bg-input);
+    width: 400px;
+    height: 56px;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    border-style: none;
+    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.6);
+    font-size: var(--text-heading-md);
+    padding-left: 20px;
+    outline: 0;
+}
+.customer-grid-cols-2{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+.customer-grid-cols-2 .column-1 .customer{
+    display: flex;
+    background-color: var(--bg-userbox);
+    padding: 10px;
+    border-radius: 16px;
+    border: solid 1px var(--borders-default);
+}
+.customer-grid-cols-2 .column-1 .customer .image img{
+    width: 56px;
+}
+.customer-grid-cols-2 .column-1 .customer .descriptions{
+    align-content: center;
+    margin-left: 10px;
+}
+.customer-grid-cols-2 .column-1 .customer .descriptions .name h1{
+    margin-block-start: 0;
+    font-size: var(--text-heading-md);
+    color: var(--color1);
+}
+.customer-grid-cols-2 .column-1 .customer .descriptions .customer-since h2{
+    margin-block-end: 0;
+    font-size: var(--text-heading-sm);
+    color: var(--color2);
+}
