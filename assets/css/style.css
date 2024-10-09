@@ -4,10 +4,12 @@
     --bg-page: #e9e7e9;
     --bg-input: #dfdcdf;
     --text-heading-sm: 12px;
+    --text-body-sm: 14px;
     --text-heading-md: 16px;
     --text-body-sm: 18px;
-    --bg-userbox: #f4f1f2;
+    --bg-boxes: #f4f1f2;
     --borders-default: #dfdcdf;
+    font-family: 'Oxygen', sans-serif;
 }
 
 body{
@@ -47,7 +49,7 @@ body{
 }
 .customer-grid-cols-2 .column-1 .customer{
     display: flex;
-    background-color: var(--bg-userbox);
+    background-color: var(--bg-boxes);
     padding: 10px;
     border-radius: 16px;
     border: solid 1px var(--borders-default);
@@ -68,4 +70,84 @@ body{
     margin-block-end: 0;
     font-size: var(--text-heading-sm);
     color: var(--color2);
+}
+.customer-grid-cols-2 .column-1 .history{
+    background-color: var(--bg-boxes);
+    margin-top: 20px;
+    border-radius: 16px;
+}
+.customer-grid-cols-2 .column-1 .history-head{
+    display: flex;
+    position: relative;
+    padding: 32px 20px 16px 20px;
+    margin: 10px;
+}
+.customer-grid-cols-2 .column-1 .history .title{
+    font-size: var(--text-heading-sm);
+    color: var(--color2);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.customer-grid-cols-2 .column-1 .history .number-cuts{
+    position: absolute;
+    right: 10px;
+    font-size: var(--text-heading-sm);
+    color: var(--color2);
+    font-weight: 500;
+}
+.customer-grid-cols-2 .column-1 .history .history-tickets{
+    overflow-y: auto;
+    height: 287px;
+}
+.customer-grid-cols-2 .column-1 .history .history-tickets .items .item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 16px 10px;
+    padding: 0 20px;
+}
+.customer-grid-cols-2 .column-1 .history .history-tickets .items .item h3, .customer-grid-cols-2 .column-1 .history .history-tickets .items .item h4{
+    font-size: var(--text-heading-sm);
+    margin-block: 0;
+}
+.customer-grid-cols-2 .column-1 .history .history-tickets .items .item .time h3{
+    color: var(--color1);
+}
+.customer-grid-cols-2 .column-1 .history .history-tickets .items .item .time h4{
+    color: var(--color2);
+    margin-top: 2px;
+}
+.customer-grid-cols-2 .column-1 .history .history-tickets .items .item .img-check{
+    position: absolute;
+    right: 10px;
+}
+.customer-grid-cols-2 .column-1 .history .history-tickets .items .item .img-check img{
+    width: 32px;
+}
+.customer-grid-cols-2 .column-2 .progress-box{
+    background-color: var(--bg-boxes);
+    padding: 20px;
+}
+.customer-grid-cols-2 .column-2 .progress-box .info{
+    display: flex;
+}
+.customer-grid-cols-2 .column-2 .progress-box .info .descritive .title h1{
+    margin-block: 0;
+    font-size: var(--text-heading-sm);
+    font-weight: 700;
+    color: var(--color1);
+    text-transform: uppercase;
+}
+.customer-grid-cols-2 .column-2 .progress-box .info .descritive .description h2{
+    font-size: var(--text-heading-sm);
+    color: var(--color2);
+    font-weight: 300;
+    margin-block: 0.5rem;
+}
+.customer-grid-cols-2 .column-2 .progress-box .info .user-id span{
+    background-color: var(--bg-input);
+    color: var(--color2);
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 50rem;
 }
