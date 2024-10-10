@@ -6,8 +6,9 @@
     --text-heading-sm: 12px;
     --text-body-sm: 14px;
     --text-heading-md: 16px;
-    --text-body-sm: 18px;
+    /*--text-body-sm: 18px;*/
     --bg-boxes: #f4f1f2;
+    --bg-tickets-box: #E9E7E9;
     --borders-default: #dfdcdf;
     font-family: 'Oxygen', sans-serif;
 }
@@ -17,7 +18,7 @@ body{
 }
 
 .container-large{
-    max-width: 1140px;
+    max-width: 912px;
     display: block;
     margin: auto;
 }
@@ -44,7 +45,7 @@ body{
 .customer-grid-cols-2{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: 4rem;
 }
 .customer-grid-cols-2 .column-1 .customer{
@@ -74,12 +75,13 @@ body{
 .customer-grid-cols-2 .column-1 .history{
     background-color: var(--bg-boxes);
     margin-top: 20px;
+    border: solid 1px var(--borders-default);
     border-radius: 16px;
 }
 .customer-grid-cols-2 .column-1 .history-head{
     display: flex;
     position: relative;
-    padding: 32px 20px 16px 20px;
+    padding: 24px 20px 16px 20px;
     margin: 10px;
 }
 .customer-grid-cols-2 .column-1 .history .title{
@@ -126,10 +128,13 @@ body{
 }
 .customer-grid-cols-2 .column-2 .progress-box{
     background-color: var(--bg-boxes);
-    padding: 20px;
+    border: solid 1px var(--borders-default);
+    border-radius: 20px;
+    padding: 32px;
 }
 .customer-grid-cols-2 .column-2 .progress-box .info{
     display: flex;
+    position: relative;
 }
 .customer-grid-cols-2 .column-2 .progress-box .info .descritive .title h1{
     margin-block: 0;
@@ -144,10 +149,38 @@ body{
     font-weight: 300;
     margin-block: 0.5rem;
 }
+.customer-grid-cols-2 .column-2 .progress-box .info .user-id{
+    align-items: center;
+    display: flex;
+    position: absolute;
+    right: 0;
+}
 .customer-grid-cols-2 .column-2 .progress-box .info .user-id span{
     background-color: var(--bg-input);
     color: var(--color2);
+    font-size: var(--text-body-sm);
     font-weight: 600;
     padding: 8px 12px;
     border-radius: 50rem;
+}
+.customer-grid-cols-2 .column-2 .progress-box .accumulated-cards{
+    margin-top: 1rem;
+}
+.customer-grid-cols-2 .column-2 .progress-box .accumulated-cards .tickets-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.customer-grid-cols-2 .column-2 .progress-box .accumulated-cards .tickets-grid .ticket{
+    width: 88px;
+    height: 88px;
+    background-color: var(--bg-tickets-box);
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    align-items: center;
+    border-radius: 20px;
+}
+.customer-grid-cols-2 .column-2 .progress-box .accumulated-cards .tickets-grid .ticket img{
+    width: 50%;
 }
