@@ -6,6 +6,7 @@
     --text-heading-sm: 12px;
     --text-body-sm: 14px;
     --text-heading-md: 16px;
+    --text-title-md: 24px;
     /*--text-body-sm: 18px;*/
     --bg-boxes: #f4f1f2;
     --bg-tickets-box: #E9E7E9;
@@ -21,13 +22,19 @@ body{
     max-width: 912px;
     display: block;
     margin: auto;
+    padding-bottom: 60px;
 }
 .container-large .subscribe .image{
     text-align: center;
     padding: 60px 0 30px 0;
 }
 .container-large .subscribe .image img{
-    width: 150px;
+    width: 120px;
+}
+.container-large .subscribe .insert-fidelity-card {
+    position: relative;
+    width: 400px;
+    margin: auto;
 }
 .container-large .subscribe .insert-fidelity-card input{
     background-color: var(--bg-input);
@@ -41,6 +48,13 @@ body{
     font-size: var(--text-heading-md);
     padding-left: 20px;
     outline: 0;
+}
+.container-large .subscribe .insert-fidelity-card img{
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 42px;
+    height: 42px;
 }
 .customer-grid-cols-2{
     display: grid;
@@ -126,6 +140,10 @@ body{
 .customer-grid-cols-2 .column-1 .history .history-tickets .items .item .img-check img{
     width: 32px;
 }
+.customer-grid-cols-2 .column-2{
+    display: inherit;
+    gap: 15px;
+}
 .customer-grid-cols-2 .column-2 .progress-box{
     background-color: var(--bg-boxes);
     border: solid 1px var(--borders-default);
@@ -183,4 +201,72 @@ body{
 }
 .customer-grid-cols-2 .column-2 .progress-box .accumulated-cards .tickets-grid .ticket img{
     width: 50%;
+}
+.customer-grid-cols-2 .column-2 .remainder-cards .cuts-remain{
+    display: flex;
+    background-color: var(--bg-boxes);
+    padding: 20px 32px;
+    border-radius: 20px;
+    border: solid 1px var(--borders-default);
+}
+.customer-grid-cols-2 .column-2 .remainder-cards .cuts-remain .left{
+    display: grid;
+    width: 85%;
+}
+.customer-grid-cols-2 .column-2 .remainder-cards .cuts-remain .left span b{
+    color: var(--color1);
+    font-size: var(--text-title-md);
+}
+.customer-grid-cols-2 .column-2 .remainder-cards .cuts-remain .left span{
+    color: var(--color2);
+    font-size: var(--text-heading-md);
+    font-weight: 300;
+}
+.customer-grid-cols-2 .column-2 .remainder-cards .cuts-remain .left input{
+    width: 85%;
+}
+.customer-grid-cols-2 .column-2 .remainder-cards .cuts-remain .left .side-side{
+    display: flex;
+}
+.customer-grid-cols-2 .column-2 .remainder-cards .cuts-remain .left .side-side span{
+    font-size: var(--text-heading-sm);
+    padding-left: 0.5rem;
+}
+.customer-grid-cols-2 .column-2 .remainder-cards .cuts-remain .right{
+    background-color: var(--bg-input);
+    padding: 16px;
+    border-radius: 50%;
+    margin: auto 0 auto auto;
+}
+.customer-grid-cols-2 .column-2 .remainder-cards .cuts-remain .right img{
+    width: 40px;
+}
+
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 40rem;
+    height: 0.75rem;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color: var(--bg-input); /* Cor de fundo do thumb */
+    height: 0.75rem;
+    border-radius: 1rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    pointer-events: none;
+    height: 0.75rem;
+    width: 1rem;
+    box-shadow: -50rem 0 5rem 20rem #2DAAAA,
+                -40rem 0 5rem 30rem #856CCF,
+                -30rem 0 2rem 25rem #D658B3,
+                -25.5rem 0 0 25rem  hsl(335, 100%, 65%);
 }
